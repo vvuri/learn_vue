@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h4 class="bg-primary text-white text-center p-2">
-      ToDo List
+      ToDo List 1
     </h4>
   </div>
 </template>
@@ -9,7 +9,16 @@
 <script>
 export default {
   name: 'App',
-}
+  methods: {
+    add: function(a,b) {
+      var result = a + b;
+      return result;
+    }
+  },
+  mounted: function() {
+    console.log(this.add(1,3));
+  }
+}  
 </script>
 
 <style>

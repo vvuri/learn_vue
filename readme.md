@@ -34,6 +34,39 @@
     $ npm install bootstrap@4.0.0
 10. В main.js добавляем 
     import "bootstrap/dist/css/bootstrap.min.css";
+11. VSCode - ставим Debugger for Chrome
+12. Создать файл конфигурации vue.config.js
+```
+module.exports = {
+  configureWebpack: {
+    devtool: 'sorce-map'
+  }
+}
+```
+13. VSCode выбирае слева Run&Debug -> F5 -> Chrome
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "vuejs: chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/src",
+            "breakOnLoad": true,
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${webRoot}/*"
+            }
+        }
+    ]
+}
+```  
+14. Запускаем сервер
+    $ npm run serve  
+    идем в код и в режим дебагинга - на методе ставим брекпоинт
+    теперь в вверху нажимаем RUN
+    необходимо все запускать в той же папке с проектом - иначе пути к файлам не пройдут
     
 
  
