@@ -1,4 +1,4 @@
-Изучение Vue.js
+### Изучение Vue.js
 
 1. Ставим CLI
     $ npm install --global @vue/cli
@@ -34,7 +34,7 @@
     $ npm install bootstrap@4.0.0
 10. В main.js добавляем 
     import "bootstrap/dist/css/bootstrap.min.css";
-    
+
 
  
 
