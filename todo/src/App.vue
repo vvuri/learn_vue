@@ -12,6 +12,13 @@
         <div class="col">{{t.action}}</div>
         <div class="col-2">{{t.done}}</div>
       </div>
+      <div class="row" v-for="t in tasks" v-bind:key="t.action">
+        <div class="col">{{t.action}}</div>
+        <div class="col-2">
+          <input type="checkbox" v-model="t.done" class="form-check-input" />
+          {{t.done}}
+        </div>
+      </div>
     </div>
   </div>
 </template>
