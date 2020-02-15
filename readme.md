@@ -1,4 +1,4 @@
-Изучение Vue.js
+### Изучение Vue.js
 
 1. Ставим CLI
     $ npm install --global @vue/cli
