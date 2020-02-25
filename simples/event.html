@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue course</title>
+</head>
+<body>
+
+    <div id="app">
+        <h4>
+          {{name}} ToDo List
+        </h4>
+        <h4 @mouseover="onHover" @mouseout="onOut">Counter: {{counter}}</h4>
+        <button v-on:click="addCounter">+1</button>
+        <button @click="counter--">-1</button>
+    </div>
+
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                name: "Yuri",
+                counter: 0
+            },
+            methods: {
+                addCounter: function() {
+                    this.counter++
+                },
+                onHover: function(event) {
+                    event.target.style.color = 'red'
+                    event.target.style.fontWeight = '900'
+                },
+                onOut: function(event) {
+                    event.target.style.color = ''
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -27,11 +27,12 @@
 - события v-on:событие или короче @событие
     - <button v-on:click="имя_метода">
     - <button @click="имя_метода">
+    - v-on: === @
     - <h2 @mouseover="имя_метода"> а вот в методе function(event) {event.target.style.color='red'}
     - @mouseover="имя_метода(arg1, arg2, arg3)" - можно передавать значения в функцию
     - @mouseover="имя_метода(arg1, arg2, $event)", где $event - нативный элемент событие
     - @keyup
- - модификатор событий @событие.модификатор @click.prevent
+ - модификатор событий (другое поведение) @событие.модификатор @click.prevent
     - можно объединять в цепочки, порядок имеет значение
     - .stop = JS stopPropagation() отмена всплытия 
     - .prevent = JS event.preventDefault() отменить стандартное поведение
